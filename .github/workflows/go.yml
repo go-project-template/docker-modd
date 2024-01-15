@@ -24,7 +24,6 @@ jobs:
       - name: Get dependencies
         run: |
           go get -v -t -d ./...
-        working-directory: apps
 
       - name: Lint
         run: |
@@ -34,7 +33,6 @@ jobs:
             echo "Please run 'go mod tidy'"
             exit 1
           fi
-        working-directory: apps
 
       - name: TestExample
         run: |

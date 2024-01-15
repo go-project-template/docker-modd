@@ -10,6 +10,10 @@ docker_env:
 docker_project:
 	docker compose -p example up -d
 
+# start docker
+start: docker_env docker_project
+	echo "Start success."
+
 # start all
-start: gomodd docker_env docker_project
+all: gomodd docker_env docker_project
 	echo "Start success."
