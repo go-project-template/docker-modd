@@ -4,11 +4,11 @@ gomodd:
 
 # start project run env
 docker_env:
-	docker compose -p example -f docker-compose-env.yml up -d
+	docker compose -p my_project -f docker-compose-env.yml up -d
 
 # start project
 docker_project:
-	docker compose -p example up -d
+	docker compose -p my_project up -d
 
 # start docker
 start: docker_env docker_project

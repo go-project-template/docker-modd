@@ -2,7 +2,6 @@ version: "3"
 
 # The environment that the project depends on,
 # starting this environment before starting the project.
-# docker network create go-zero-example_my_net
 
 services:
   # mysql容器
