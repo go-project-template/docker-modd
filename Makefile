@@ -1,3 +1,7 @@
+# chmod data dir to 777
+chmod_data:
+	sudo chmod -R 777 data
+
 # docker build gomodd
 gomodd:
 	cd deploy/gomodd && docker build -t gomodd .
@@ -11,7 +15,7 @@ docker_project:
 	docker compose -p my_project up -d
 
 # start docker
-start: gomodd docker_env docker_project
+start: chmod_data gomodd docker_env docker_project
 	echo "Start success."
 
 # Stop and remove containers, networks

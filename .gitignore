@@ -19,7 +19,8 @@ data/*
 !data/.gitkeep
 
 # mac
-.DS_Store
 **/.DS_Store
+
+**/**.log
 
 go.sum
