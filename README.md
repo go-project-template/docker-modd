@@ -4,8 +4,8 @@ Hot deploy and hot update projects with docker、modd.
 
 <div align=center>
 
-[![Go](https://github.com/go-template-project/docker-modd/workflows/Go/badge.svg?branch=main)](https://github.com/go-template-project/docker-modd/actions)
-[![Release](https://img.shields.io/github/v/release/github.com/go-template-project/docker-modd.svg?style=flat-square)](https://github.com/go-template-project/docker-modd)
+[![Go](https://github.com/go-project-template/docker-modd/workflows/Go/badge.svg)](https://github.com/go-project-template/docker-modd/actions)
+[![Release](https://img.shields.io/github/v/release/go-project-template/docker-modd.svg?style=flat-square)](https://github.com/go-project-template/docker-modd)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </div>
