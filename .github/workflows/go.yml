@@ -24,25 +24,23 @@ jobs:
 
       - name: Get dependencies
         run: |
-          cd apps/example
-          go get -v -t -d ./...
+          cd apps && go get -v -t -d ./...
 
       - name: Lint
         run: |
+          cd apps
           go vet -stdmethods=false $(go list ./...)
-
           go mod tidy
           if ! test -z "$(git status --porcelain)"; then
             echo "Please run 'go mod tidy'"
             exit 1
           fi
 
-      - name: Test
+      - name: TestExample
         run: |
-          go mod verify
-          go mod download
+          cd apps/example
           go test ./...
-          go build -v main.go
+          go build -v .
 
       - name: Codecov
         uses: codecov/codecov-action@v3
