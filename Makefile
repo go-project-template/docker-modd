@@ -11,9 +11,9 @@ docker_project:
 	docker compose -p my_project up -d
 
 # start docker
-start: docker_env docker_project
+start: gomodd docker_env docker_project
 	echo "Start success."
 
-# start all
-all: gomodd docker_env docker_project
-	echo "Start success."
+# Stop and remove containers, networks
+stop:
+	docker compose -p my_project down
