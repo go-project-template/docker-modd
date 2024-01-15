@@ -23,20 +23,21 @@ jobs:
 
       - name: Get dependencies
         run: |
-          cd apps && go get -v -t -d ./...
+          go get -v -t -d ./...
+        working-directory: apps
 
       - name: Lint
         run: |
-          cd apps
           go vet -stdmethods=false $(go list ./...)
           go mod tidy
           if ! test -z "$(git status --porcelain)"; then
             echo "Please run 'go mod tidy'"
             exit 1
           fi
+        working-directory: apps
 
       - name: TestExample
         run: |
-          cd apps/example
           go test ./...
           go build -v .
+        working-directory: apps/example
