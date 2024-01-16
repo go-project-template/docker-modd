@@ -6,7 +6,7 @@ chmod_data:
 gomodd:
 	cd deploy/gomodd && docker build -t gomodd .
 
-# start project run env
+# start project env
 docker_env:
 	docker compose -p my_project -f docker-compose-env.yml up -d
 
@@ -16,8 +16,16 @@ docker_project:
 
 # start docker
 start: chmod_data gomodd docker_env docker_project
-	echo "Start success."
+	echo "Docker start success."
+
+# update docker
+update: docker_env docker_project
+	echo "Docker update success."
+
+# restart docker
+restart:
+	docker compose -p my_project restart
 
 # Stop and remove containers, networks
-stop:
+down:
 	docker compose -p my_project down

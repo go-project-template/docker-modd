@@ -34,8 +34,8 @@ jobs:
             exit 1
           fi
 
-      - name: TestExample
+      - name: TestI_am_example
         run: |
           go test ./...
           go build -v .
-        working-directory: apps/example
+        working-directory: apps/i_am_example
