@@ -10,14 +10,19 @@ Hot deploy and hot update projects with docker、modd.
 
 </div>
 
-## how to use
+## Involved technologies
+
+- [Docker Compose](https://docs.docker.com/compose/)
+- [modd](https://github.com/cortesi/modd/) is a developer tool that triggers commands and manages daemons in response to filesystem changes.
+
+## How to use
 
 1. Put your project in the apps directory.
 2. Change `modd.conf` file. Replace my project `example` config with yourself project config.
 3. Run `make start` command.
 4. Done.
 
-## reference
+## Reference
 
 - [github.com/Mikaelemmmm/gomodd](https://github.com/Mikaelemmmm/gomodd)
 - [github.com/cortesi/modd/cmd/modd](https://github.com/cortesi/modd/)
